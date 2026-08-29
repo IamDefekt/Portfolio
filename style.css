@@ -1,0 +1,45 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body {
+    background: #FAFAF8;
+    font-family: Roboto;
+    color:#1B1D22;
+}
+
+nav {
+    height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+nav p {
+    font-family: Sora;
+    text-transform: uppercase;
+}
+
+nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+
+section{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.btns, .skills {
+    display: flex;
+    gap: 15px;
+}
