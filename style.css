@@ -21,20 +21,26 @@ body {
     --corail: #993C1D;
     --fade-corail: #FAECE7;
     --txt: #1B1D22;
-    --stroke : #E2EEE1;
+    --stroke : 1px solid #E2EEE1;
+    --nav-height: 70px;
 }
 
 html {scroll-behavior: smooth;}
 
-@media (min-width:1024px){
+header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
 
 nav {
-    height: 70px;
+    background: var(--background);
+    height: var(--nav-height);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    border-bottom: 1px solid var(--stroke);
+    border-bottom: var(--stroke);
 }
 
 nav p {
@@ -47,5 +53,70 @@ nav ul {
     gap: 20px;
 }
 
+nav a {color: var(--txt);}
+
+section{
+    min-height: calc(100vh - var(--nav-height));
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 0 50px;
 }
 
+/* ----- HERO SECTION ----- */
+
+#hero p {
+    background: var(--fade-corail);
+    color: var(--corail);
+    padding: 5px 10px ;
+    border-radius: 0.5rem;
+}
+
+#hero h1 {
+    font: 2.7rem Sora;
+}
+
+#hero h2 {
+    font-size: 1.2rem;
+    color: var(--grey);
+    font-weight: normal;
+}
+
+#hero .btns {
+    margin-top: 35px;
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.green-btn {
+    background-color: var(--green);
+    color: white;
+    border: 1px solid transparent;
+}
+
+.white-btn {
+    background-color: white;
+    color: var(--txt);
+    border: var(--stroke);
+}
+
+.green-btn, .white-btn {
+    padding: 12px 16px;
+    border-radius: 0.5rem;
+    text-transform: uppercase;
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.green-btn:hover, .white-btn:hover {
+    box-shadow: 0 4px 12px rgba(27, 29, 34, 0.12);
+    transform: translateY(-1px);
+}
+
+.green-btn:hover {
+    box-shadow: 0 6px 16px rgba(15, 110, 86, 0.25);
+}
