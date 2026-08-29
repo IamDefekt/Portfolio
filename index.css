@@ -71,9 +71,9 @@ section{
 
 /* ----- HERO SECTION ----- */
 
-#hero p {
-    background: var(--fade-corail);
+#hero .tag {
     color: var(--corail);
+    font-size: 1rem;
     padding: 5px 10px ;
     border-radius: 0.2rem;
 }
@@ -82,7 +82,7 @@ section{
     font: 2.7rem Sora;
 }
 
-#hero h2 {
+#hero p {
     font-size: 1.2rem;
     color: var(--grey);
     font-weight: normal;
