@@ -88,7 +88,7 @@ section{
     font-weight: normal;
 }
 
-#hero .btns {
+.btns {
     margin-top: 35px;
     display: flex;
     align-items: center;
@@ -190,7 +190,6 @@ h4 {
 }
 
 #projets .btns {
-    display: flex;
     gap: 15px;
     margin-top: 15px;
 }
@@ -207,7 +206,9 @@ h4 {
 
 /* ----- PERSO SECTION ----- */
 
-#about {
+.perso {gap: 75px;}
+
+#about, #contact {
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -240,5 +241,13 @@ h4 {
     border: var(--stroke);
     padding: 3px 6px;
     font-size: 0.9rem;
+}
+
+#contact .btns {margin-top: 0;}
+
+#contact .btns a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
