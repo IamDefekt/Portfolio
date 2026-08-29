@@ -18,6 +18,7 @@ body {
     --background: #FAFAF8;
     --grey: #6B6F79;
     --green: #0F6E56;
+    --fade-green: #E1F5EE;
     --corail: #993C1D;
     --fade-corail: #FAECE7;
     --txt: #1B1D22;
@@ -67,13 +68,14 @@ section{
     padding: 0 50px;
 }
 
+
 /* ----- HERO SECTION ----- */
 
 #hero p {
     background: var(--fade-corail);
     color: var(--corail);
     padding: 5px 10px ;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
 }
 
 #hero h1 {
@@ -107,7 +109,7 @@ section{
 
 .green-btn, .white-btn {
     padding: 12px 16px;
-    border-radius: 0.5rem;
+    border-radius: 0.2rem;
     text-transform: uppercase;
     transition: box-shadow 0.2s ease, transform 0.2s ease;
 }
@@ -119,4 +121,81 @@ section{
 
 .green-btn:hover {
     box-shadow: 0 6px 16px rgba(15, 110, 86, 0.25);
+}
+
+
+/* ----- PROJECTS SECTION ----- */
+
+h3 {
+    font: 1.5rem Sora;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.cards-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.card {
+    height: 280px;
+    width: 260px;
+    background: white;
+    border: var(--stroke);
+    border-radius: 0.2rem;
+}
+
+.pic {
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.green {background: var(--fade-green);}
+
+.corail {background: var(--fade-corail);}
+
+.icon-server {color: var(--corail);}
+
+.icon-play {color: var(--green);}
+
+#projets .prez {
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    padding: 15px;
+}
+
+#projets .prez p:not(.tag) {flex: 1;}
+
+#projets .tag {
+    font-size: 0.6rem;
+    border-radius: 0.2rem;
+    padding: 4px 8px;
+}
+
+h4 {
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+
+#projets p {
+    text-align: justify;
+    font-size: 0.9rem;
+}
+
+#projets .btns {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+#projets .green-btn, #projets .white-btn {
+    font-size: 0.8rem;
+    text-transform: none;
+    padding: 3px 6px;
 }
