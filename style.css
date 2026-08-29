@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,21 +9,36 @@
 }
 
 body {
-    background: #FAFAF8;
-    font-family: Roboto;
-    color:#1B1D22;
+    background: var(--background);
+    font: 1rem Roboto;
+    color:var(--txt);
 }
+
+:root {
+    --background: #FAFAF8;
+    --grey: #6B6F79;
+    --green: #0F6E56;
+    --corail: #993C1D;
+    --fade-corail: #FAECE7;
+    --txt: #1B1D22;
+    --stroke : #E2EEE1;
+}
+
+html {scroll-behavior: smooth;}
+
+@media (min-width:1024px){
 
 nav {
     height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
+    padding: 0 50px;
+    border-bottom: 1px solid var(--stroke);
 }
 
 nav p {
-    font-family: Sora;
+    font: 1.1rem Sora;
     text-transform: uppercase;
 }
 
@@ -30,16 +47,5 @@ nav ul {
     gap: 20px;
 }
 
-
-section{
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    gap: 20px;
 }
 
-.btns, .skills {
-    display: flex;
-    gap: 15px;
-}
