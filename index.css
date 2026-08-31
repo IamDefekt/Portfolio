@@ -210,6 +210,80 @@ h3 {
 
 /* ----- MAQUETTE SECTION ----- */
 
+#maquettes .cards-container {gap: 20px;}
+
+#maquettes .card {
+    height: auto;
+    cursor: pointer;
+}
+
+#maquettes .pic {
+    height: auto;
+    aspect-ratio: 450 / 320;
+    background: var(--fade-green);
+}
+
+#maquettes .pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#maquettes .prez {
+    height: auto;
+    padding: 15px;
+}
+
+#maquettes p {
+    margin-top: 5px;
+    font-size: 0.8rem;
+    color: var(--grey);
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal[hidden] { display: none; }
+
+.modal-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(27, 29, 34, 0.6);
+}
+
+.modal-content {
+    position: relative;
+    background: white;
+    border-radius: 5px;
+    max-width: 700px;
+    width: 90%;
+    max-height: 85vh;
+    overflow-y: auto;
+    padding: 30px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 20px;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    line-height: 1;
+    color: white;
+    z-index: 1;
+}
+
+.modal-img {
+    width: 100%;
+    border-radius: 5px;
+}
 
 /* ----- PERSO SECTION ----- */
 
