@@ -10,6 +10,13 @@ burger.addEventListener('click', () => {
     burger.classList.toggle('open'); 
 });
 
+document.querySelectorAll('#menu a').forEach((link) => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('open');
+        burger.classList.remove('open');
+    });
+});
+
 // Pop-up pour les maquettes
 
 const modal = document.getElementById('maquette-modal');
