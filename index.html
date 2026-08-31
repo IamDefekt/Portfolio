@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="index.css">
+    <script src="/main.js" defer></script>
     <title>Document</title>
 </head>
 <body>
@@ -96,11 +97,49 @@
         <section id="maquettes">
             <h2>Maquettes réalisées en formation</h2>
 
-            <div class="carousel-container">
-                <div class="carousel">
+            <div class="cards-container">
 
-                </div>
+                    <div class="card" data-full="/medias/Maquette-Gaia.png">
+                        <div class="pic">
+                            <a href="/">
+                                <img src="/medias/Gaia-Preview.png" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="prez">
+                            <h3>Gaïa</h3>
+                            <p>Maison d'hôtes</p>
+                        </div>
+                    </div>
+
+                    <div class="card" data-full="/medias/Maquette-Nebulax.png">
+                        <div class="pic">
+                            <a href="/">
+                                <img src="/medias/Nebulax-Preview.png" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="prez">
+                            <h3>Nebulax</h3>
+                            <p>Hébergement cloud</p>
+                        </div>
+                    </div>
+
+                    <div class="card" data-full="/medias/Maquette-StudioHorizon.png">
+                        <div class="pic">
+                            <a href="/">
+                                <img src="/medias/StudioHorizon-Preview.png" alt="">
+                            </a>
+                        </div>
+                        
+                        <div class="prez">
+                            <h3>Studio Horizon</h3>
+                            <p>Cabinet d'architectes</p>
+                        </div>
+                    </div>
+
             </div>
+
         </section>
 
         <section class="perso">
@@ -158,5 +197,12 @@
         </section>
     </main>
     
+    <div class="modal" id="maquette-modal" hidden>
+        <div class="modal-overlay" data-close></div>
+        <button class="modal-close" type="button" aria-label="Fermer" data-close>&times;</button>
+        <div class="modal-content">
+            <img class="modal-img" src="" alt="">
+        </div>
+    </div>
 </body>
 </html>
