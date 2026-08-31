@@ -101,7 +101,10 @@ nav ul {
 
 nav a { color: var(--txt); }
 
-main { height: calc(100dvh - var(--nav-height)); }
+main { 
+    height: calc(100dvh - var(--nav-height)); 
+    overflow-y: scroll;
+}
 
 section{
     min-height: calc(100dvh - var(--nav-height));
@@ -112,7 +115,7 @@ section{
     justify-content: center;
     align-items: flex-start;
     gap: 20px;
-    padding: 0 30px;    
+    padding: 50px 30px;    
 }
 
 
@@ -385,8 +388,7 @@ h3 {
 
     /* ----- Hero ----- */
 
-    main {
-        overflow-y: scroll;
+    main {        
         scroll-behavior: smooth;
         scroll-snap-type: y mandatory;
     }
