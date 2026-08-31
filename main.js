@@ -1,5 +1,17 @@
 'use strict';
 
+// Menu burger mobile
+
+const burger = document.getElementById('menuBurger');
+const menu = document.getElementById('menu');
+
+burger.addEventListener('click', () => {
+    menu.classList.toggle('open'); 
+    burger.classList.toggle('open'); 
+});
+
+// Pop-up pour les maquettes
+
 const modal = document.getElementById('maquette-modal');
 
 if (modal) {
