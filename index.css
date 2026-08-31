@@ -136,7 +136,7 @@ section{
     font-weight: normal;
 }
 
-.btns {
+#hero .btns {
     margin-top: 35px;
     display: flex;
     flex-direction: column;
@@ -182,13 +182,13 @@ h2 {
 .cards-container {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    gap: 25px;
     flex-wrap: wrap;
 }
 
 .card {
-    height: 280px;
-    width: 260px;
+    height: 240px;
+    width: 100%;
     background: white;
     border: var(--stroke);
     border-radius: 0.2rem;
@@ -218,8 +218,6 @@ h2 {
     padding: 15px;
 }
 
-#projets .prez p:not(.tag) { flex: 1; }
-
 #projets .tag {
     font-size: 0.6rem;
     border-radius: 0.2rem;
@@ -237,6 +235,7 @@ h3 {
 }
 
 #projets .btns {
+    display: flex;
     gap: 15px;
     margin-top: 15px;
 }
@@ -409,9 +408,22 @@ h3 {
 
     #hero p { font-size: 1.2rem; }
 
-    .btns { 
+    #hero .btns { 
         flex-direction: row; 
         gap: 35px;
     }
+
+    /* ----- Projets ----- */
+
+    .cards-container { justify-content: space-between; }
+    
+    .card { 
+        height: 280px;
+        width: 260px; 
+    }
+
+    #projets .prez p:not(.tag) { flex: 1; }
+
+
     
 }
