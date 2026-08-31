@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
 * {
@@ -27,6 +27,10 @@ body {
     --nav-height: 70px;
 }
 
+/* ----- Version mobile ----- */
+
+/* ----- Navbar ----- */
+
 header {
     position: sticky;
     top: 0;
@@ -39,7 +43,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 50px;
+    padding: 0 30px;
     border-bottom: var(--stroke);
 }
 
@@ -48,12 +52,57 @@ nav p {
     text-transform: uppercase;
 }
 
+.liste {
+    display: none;
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: var(--background);
+    transition: 0.5s ease;
+}
+
+.liste.open {
+    display: block;
+    max-height: 500px;
+    width: 100%;
+    padding: 30px;
+    border-bottom: var(--stroke);
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    background: none;
+    border: none;
+}
+
+.burger span {
+    display: block;
+    height: 4px;
+    width: 30px;
+    border-radius: 3px;
+    background-color: var(--txt);
+    transition: 0.4s ease;
+}
+
+.burger.open span:nth-child(1) { transform: rotate(45deg) translate(7px, 6px); }
+
+.burger.open span:nth-child(2) { opacity: 0; }
+
+.burger.open span:nth-child(3) { transform: rotate(-45deg) translate(6px, -6px); }
+
 nav ul {
     display: flex;
+    flex-direction: column;
     gap: 20px;
 }
 
-nav a {color: var(--txt);}
+nav a { color: var(--txt); }
+
+
+/* ----- Main ----- */
 
 main {
     height: calc(100vh - var(--nav-height));
@@ -76,7 +125,7 @@ section{
 }
 
 
-/* ----- HERO SECTION ----- */
+/* ----- Hero ----- */
 
 #hero .tag {
     color: var(--corail);
@@ -85,9 +134,7 @@ section{
     border-radius: 0.2rem;
 }
 
-#hero h1 {
-    font: 2.7rem Sora;
-}
+#hero h1 { font: 2.7rem Sora; }
 
 #hero p {
     font-size: 1.2rem;
@@ -126,12 +173,10 @@ section{
     transform: translateY(-1px);
 }
 
-.green-btn:hover {
-    box-shadow: 0 6px 16px rgba(15, 110, 86, 0.25);
-}
+.green-btn:hover { box-shadow: 0 6px 16px rgba(15, 110, 86, 0.25); }
 
 
-/* ----- PROJECTS SECTION ----- */
+/* ----- PROJETS ----- */
 
 h2 {
     font: 1.5rem Sora;
@@ -161,13 +206,13 @@ h2 {
     justify-content: center;
 }
 
-.green {background: var(--fade-green);}
+.green { background: var(--fade-green); }
 
-.corail {background: var(--fade-corail);}
+.corail { background: var(--fade-corail); }
 
-.icon-server {color: var(--corail);}
+.icon-server { color: var(--corail); }
 
-.icon-play {color: var(--green);}
+.icon-play { color: var(--green); }
 
 #projets .prez {
     height: 70%;
@@ -178,7 +223,7 @@ h2 {
     padding: 15px;
 }
 
-#projets .prez p:not(.tag) {flex: 1;}
+#projets .prez p:not(.tag) { flex: 1; }
 
 #projets .tag {
     font-size: 0.6rem;
@@ -208,9 +253,9 @@ h3 {
 }
 
 
-/* ----- MAQUETTE SECTION ----- */
+/* ----- MAQUETTES ----- */
 
-#maquettes .cards-container {gap: 20px;}
+#maquettes .cards-container { gap: 20px; }
 
 #maquettes .card {
     height: auto;
@@ -285,7 +330,7 @@ h3 {
     border-radius: 5px;
 }
 
-/* ----- PERSO SECTION ----- */
+/* ----- PERSO ----- */
 
 .perso {gap: 75px;}
 
@@ -324,7 +369,7 @@ h3 {
     font-size: 0.9rem;
 }
 
-#contact .btns {margin-top: 0;}
+#contact .btns { margin-top: 0; }
 
 #contact .btns a {
     display: flex;
@@ -332,3 +377,22 @@ h3 {
     gap: 8px;
 }
 
+/* ----- Version desktop ----- */
+
+@media (min-width:1024px){
+
+    /* ----- Navbar ----- */
+
+    nav { padding: 0 50px; }
+
+    #menuBurger { display: none; }
+
+    .liste {
+        position: relative;
+        display: flex;
+        top: auto;
+    }
+
+    nav ul { flex-direction: row; }
+    
+}
