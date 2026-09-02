@@ -179,15 +179,18 @@ h2 {
 }
 
 .card {
-    height: 240px;
+    height: auto;
     width: 100%;
     background: white;
     border: var(--stroke);
     border-radius: 0.2rem;
+    display: flex;
+    flex-direction: column;
 }
 
 .pic {
-    height: 30%;
+    height: 80px;
+    flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -202,7 +205,8 @@ h2 {
 .icon-play { color: var(--green); }
 
 #projets .prez {
-    height: 70%;
+    height: auto;
+    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
@@ -343,7 +347,8 @@ h3 {
 
 .skills {
     display: flex;
-    gap: 15px;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-top: 25px;
     clear: both;
 }
@@ -383,11 +388,14 @@ h3 {
 
     /* ----- Projets ----- */
 
-    .cards-container { justify-content: space-between; }
+    .cards-container { align-items: stretch; }
     
-    .card { 
-        height: 280px;
-        width: 260px; 
+    .card { width: calc(50% - 12.5px) }
+
+    #projets .prez {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
     }
 
     #projets .prez p:not(.tag) { flex: 1; }
@@ -451,8 +459,13 @@ h3 {
 
     .green-btn:hover { box-shadow: 0 6px 16px rgba(15, 110, 86, 0.25); }
 
+    /* ----- Projets ----- */
 
+    .cards-container { justify-content: space-between; }
 
-    
+    .card { 
+        height: 280px;
+        width: 260px; 
+    }    
     
 }
