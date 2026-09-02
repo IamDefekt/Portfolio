@@ -327,13 +327,13 @@ h3 {
 }
 
 .description {
-    display: flex;
-    gap: 30px;
     text-align: justify;
     margin-top: 15px;
 }
 
 #about img {
+    float: left;
+    margin-right: 20px;
     width: 80px;
     height: 80px;
     border-radius: 100%;
@@ -346,6 +346,7 @@ h3 {
     display: flex;
     gap: 15px;
     margin-top: 25px;
+    clear: both;
 }
 
 .skills p {
@@ -428,6 +429,16 @@ h3 {
     #projets .prez p:not(.tag) { flex: 1; }
 
     /* ----- Perso ----- */
+
+    .description {
+        display: flex;
+        gap: 30px;        
+    }
+
+    #about img {
+        margin-right: 0;
+        float: none;
+    }
 
     #contact .btns { gap: 20px; }
     
