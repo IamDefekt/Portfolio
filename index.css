@@ -251,7 +251,6 @@ h3 {
 #maquettes .pic {
     height: auto;
     aspect-ratio: 450 / 320;
-    background: var(--fade-green);
 }
 
 #maquettes .pic img {
@@ -369,6 +368,46 @@ h3 {
     text-transform: none;
 }
 
+/* ----- Version tablette ----- */
+
+@media (min-width:768px) {
+
+    /* ----- Hero ----- */
+
+    section { padding: 50px; }
+
+    #hero .btns { 
+        flex-direction: row; 
+        gap: 20px;
+    }
+
+    /* ----- Projets ----- */
+
+    .cards-container { justify-content: space-between; }
+    
+    .card { 
+        height: 280px;
+        width: 260px; 
+    }
+
+    #projets .prez p:not(.tag) { flex: 1; }
+
+    /* ----- Perso ----- */
+
+    .description {
+        display: flex;
+        gap: 30px;        
+    }
+
+    #about img {
+        margin-right: 0;
+        float: none;
+    }
+
+    #contact .btns { gap: 20px; }
+
+}
+
 /* ----- Version desktop ----- */
 
 @media (min-width:1024px){
@@ -395,8 +434,8 @@ h3 {
     }
 
     section {
-        padding: 0 50px;
         scroll-snap-align: start;
+        padding: 0 50px;
     }
 
     #hero .tag { font-size: 1rem; }
@@ -405,11 +444,6 @@ h3 {
 
     #hero p { font-size: 1.2rem; }
 
-    #hero .btns { 
-        flex-direction: row; 
-        gap: 20px;
-    }
-
     .green-btn:hover, .white-btn:hover {
         box-shadow: 0 4px 12px rgba(27, 29, 34, 0.12);
         transform: translateY(-1px);
@@ -417,29 +451,8 @@ h3 {
 
     .green-btn:hover { box-shadow: 0 6px 16px rgba(15, 110, 86, 0.25); }
 
-    /* ----- Projets ----- */
 
-    .cards-container { justify-content: space-between; }
+
     
-    .card { 
-        height: 280px;
-        width: 260px; 
-    }
-
-    #projets .prez p:not(.tag) { flex: 1; }
-
-    /* ----- Perso ----- */
-
-    .description {
-        display: flex;
-        gap: 30px;        
-    }
-
-    #about img {
-        margin-right: 0;
-        float: none;
-    }
-
-    #contact .btns { gap: 20px; }
     
 }
